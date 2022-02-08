@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src='https://cdn.plot.ly/plotly-2.8.3.min.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+    <title>Dashboard | Goodfood</title>
+</head>
+<body>
+    <nav class="sidebar">
+        
+        <div class="nav-item">
+            <div class="menu">
+                <h1 class="menu-heading">
+                    Menu
+                </h1>
+                <ul class="menu-items">
+                    <li class="active">
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.49774 0.500305H11.502C14.0527 0.500305 15.4927 1.94706 15.5002 4.49781V11.5028C15.5002 14.0528 14.0527 15.5003 11.502 15.5003H4.49774C1.94699 15.5003 0.500244 14.0528 0.500244 11.5028V4.49781C0.500244 1.94706 1.94699 0.500305 4.49774 0.500305ZM8.03704 12.3953C8.36029 12.3953 8.62954 12.1553 8.65954 11.8328V4.1903C8.68954 3.9578 8.57779 3.72455 8.37529 3.5978C8.16454 3.4703 7.90954 3.4703 7.70779 3.5978C7.50454 3.72455 7.39279 3.9578 7.41454 4.1903V11.8328C7.45279 12.1553 7.72204 12.3953 8.03704 12.3953ZM11.4878 12.3953C11.8028 12.3953 12.072 12.1553 12.1103 11.8328V9.37281C12.132 9.13206 12.0203 8.90781 11.817 8.78031C11.6153 8.65281 11.3603 8.65281 11.1503 8.78031C10.947 8.90781 10.8353 9.13206 10.8653 9.37281V11.8328C10.8953 12.1553 11.1645 12.3953 11.4878 12.3953ZM5.16452 11.8328C5.13452 12.1553 4.86527 12.3953 4.54202 12.3953C4.21952 12.3953 3.94952 12.1553 3.92027 11.8328V6.6503C3.89777 6.41705 4.00952 6.1853 4.21277 6.0578C4.41452 5.9303 4.67027 5.9303 4.87277 6.0578C5.07452 6.1853 5.18777 6.41705 5.16452 6.6503V11.8328Z" fill="#707FDD"/>
+                            </svg>
+                            Dashboard   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.591 8.42484H12.6669C12.9816 8.42484 13.2289 8.16461 13.2289 7.8508C13.2289 7.52934 12.9816 7.27677 12.6669 7.27677H10.591C10.2762 7.27677 10.0289 7.52934 10.0289 7.8508C10.0289 8.16461 10.2762 8.42484 10.591 8.42484ZM15.1324 4.44562C15.5896 4.44562 15.8893 4.60635 16.1891 4.95843C16.4889 5.3105 16.5413 5.81565 16.4739 6.27412L15.7619 11.295C15.627 12.2602 14.8177 12.9712 13.8659 12.9712H5.68979C4.69307 12.9712 3.86871 12.1913 3.78627 11.181L3.09681 2.83755L1.96519 2.63855C1.66543 2.58498 1.45559 2.28648 1.50805 1.98032C1.56051 1.66728 1.85278 1.45987 2.16004 1.50655L3.9474 1.78133C4.2022 1.82801 4.38955 2.04156 4.41204 2.30179L4.55443 4.01624C4.57691 4.26193 4.77176 4.44562 5.01157 4.44562H15.1324ZM5.56973 14.1809C4.94023 14.1809 4.43062 14.7014 4.43062 15.3443C4.43062 15.9795 4.94023 16.5 5.56973 16.5C6.19175 16.5 6.70135 15.9795 6.70135 15.3443C6.70135 14.7014 6.19175 14.1809 5.56973 14.1809ZM14.0007 14.1809C13.3712 14.1809 12.8616 14.7014 12.8616 15.3443C12.8616 15.9795 13.3712 16.5 14.0007 16.5C14.6227 16.5 15.1323 15.9795 15.1323 15.3443C15.1323 14.7014 14.6227 14.1809 14.0007 14.1809Z" fill="#A6ABC8"/>
+                            </svg>    
+                            Food Order  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.8575 1.5H12.1432C14.46 1.5 15.75 2.835 15.75 5.1225V12.87C15.75 15.195 14.46 16.5 12.1432 16.5H5.8575C3.5775 16.5 2.25 15.195 2.25 12.87V5.1225C2.25 2.835 3.5775 1.5 5.8575 1.5ZM6.06011 4.995V4.9875H8.30185C8.6251 4.9875 8.8876 5.25 8.8876 5.57175C8.8876 5.9025 8.6251 6.165 8.30185 6.165H6.06011C5.73686 6.165 5.47511 5.9025 5.47511 5.58C5.47511 5.2575 5.73686 4.995 6.06011 4.995ZM6.06011 9.555H11.9401C12.2626 9.555 12.5251 9.2925 12.5251 8.97C12.5251 8.6475 12.2626 8.38425 11.9401 8.38425H6.06011C5.73686 8.38425 5.47511 8.6475 5.47511 8.97C5.47511 9.2925 5.73686 9.555 6.06011 9.555ZM6.06002 12.9825H11.94C12.2393 12.9525 12.465 12.6968 12.465 12.3975C12.465 12.09 12.2393 11.835 11.94 11.805H6.06002C5.83502 11.7825 5.61752 11.8875 5.49752 12.0825C5.37752 12.27 5.37752 12.5175 5.49752 12.7125C5.61752 12.9 5.83502 13.0125 6.06002 12.9825Z" fill="#A6ABC8"/>
+                            </svg>        
+                            Manage Menu  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.50006 9.01127C1.50006 5.06034 4.65756 1.5 9.01506 1.5C13.2751 1.5 16.5001 4.99274 16.5001 8.98873C16.5001 13.6232 12.7201 16.5 9.00006 16.5C7.77006 16.5 6.40506 16.1695 5.31006 15.5235C4.92756 15.2907 4.60506 15.1179 4.19256 15.2531L2.67756 15.7038C2.29506 15.824 1.95006 15.5235 2.06256 15.1179L2.56506 13.4354C2.64756 13.2026 2.63256 12.9547 2.51256 12.7594C1.86756 11.5726 1.50006 10.2732 1.50006 9.01127ZM8.02497 9.01127C8.02497 9.54457 8.45247 9.97271 8.98497 9.98022C9.51747 9.98022 9.94497 9.54457 9.94497 9.01878C9.94497 8.48548 9.51747 8.05734 8.98497 8.05734C8.45997 8.04983 8.02497 8.48548 8.02497 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05734 12.4425 8.05734C11.91 8.05734 11.4825 8.48548 11.4825 9.01878ZM5.52765 9.98023C5.00265 9.98023 4.56765 9.54457 4.56765 9.01879C4.56765 8.48549 4.99515 8.05734 5.52765 8.05734C6.06015 8.05734 6.48765 8.48549 6.48765 9.01879C6.48765 9.54457 6.06015 9.97272 5.52765 9.98023Z" fill="#A6ABC8"/>
+                            </svg>       
+                            Customer Review  
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h1 class="menu-heading">
+                    Others
+                </h1>
+                <ul class="menu-items">
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3016 10.1851C15.5699 10.3276 15.7768 10.5526 15.9225 10.7776C16.2061 11.2426 16.1831 11.8126 15.9071 12.3151L15.3706 13.2151C15.087 13.6951 14.5582 13.9951 14.014 13.9951C13.7457 13.9951 13.4468 13.9201 13.2015 13.7701C13.0022 13.6426 12.7723 13.5976 12.527 13.5976C11.7682 13.5976 11.1321 14.2201 11.1091 14.9626C11.1091 15.8251 10.4039 16.5001 9.52247 16.5001H8.48007C7.59097 16.5001 6.88582 15.8251 6.88582 14.9626C6.87049 14.2201 6.23432 13.5976 5.47552 13.5976C5.22258 13.5976 4.99264 13.6426 4.80102 13.7701C4.55575 13.9201 4.24917 13.9951 3.98857 13.9951C3.43671 13.9951 2.90785 13.6951 2.62426 13.2151L2.09539 12.3151C1.8118 11.8276 1.79647 11.2426 2.08006 10.7776C2.2027 10.5526 2.43264 10.3276 2.69324 10.1851C2.90785 10.0801 3.04581 9.90758 3.17611 9.70508C3.55935 9.06008 3.32941 8.21258 2.67791 7.83008C1.91911 7.40258 1.67384 6.45008 2.11072 5.70758L2.62426 4.82258C3.06881 4.08008 4.01923 3.81758 4.7857 4.25258C5.45252 4.61258 6.31863 4.37258 6.70953 3.73508C6.83216 3.52508 6.90115 3.30008 6.88582 3.07508C6.87049 2.78258 6.9548 2.50508 7.10043 2.28008C7.38402 1.81508 7.89756 1.51508 8.45708 1.50008H9.5378C10.105 1.50008 10.6185 1.81508 10.9021 2.28008C11.0401 2.50508 11.1321 2.78258 11.1091 3.07508C11.0937 3.30008 11.1627 3.52508 11.2853 3.73508C11.6762 4.37258 12.5424 4.61258 13.2168 4.25258C13.9756 3.81758 14.9337 4.08008 15.3706 4.82258L15.8842 5.70758C16.3287 6.45008 16.0834 7.40258 15.317 7.83008C14.6655 8.21258 14.4355 9.06008 14.8264 9.70508C14.9491 9.90758 15.087 10.0801 15.3016 10.1851ZM6.83209 9.00758C6.83209 10.1851 7.8055 11.1226 9.00886 11.1226C10.2122 11.1226 11.1626 10.1851 11.1626 9.00758C11.1626 7.83008 10.2122 6.88508 9.00886 6.88508C7.8055 6.88508 6.83209 7.83008 6.83209 9.00758Z" fill="#A6ABC8"/>
+                            </svg>    
+                            Settings   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3267 6.28635H16.5C16.5 3.73844 14.9733 2.25 12.3867 2.25H5.61333C3.02667 2.25 1.5 3.73844 1.5 6.25385V11.7461C1.5 14.2616 3.02667 15.75 5.61333 15.75H12.3867C14.9733 15.75 16.5 14.2616 16.5 11.7461V11.5122H13.3267C11.8539 11.5122 10.66 10.3481 10.66 8.91225C10.66 7.47637 11.8539 6.31235 13.3267 6.31235V6.28635ZM13.3265 7.40431H15.9399C16.2492 7.40431 16.4999 7.64876 16.4999 7.95029V9.84822C16.4963 10.1483 16.2477 10.3907 15.9399 10.3942H13.3865C12.641 10.404 11.989 9.90628 11.8199 9.19825C11.7352 8.75872 11.8541 8.30518 12.1447 7.95917C12.4353 7.61315 12.8679 7.41006 13.3265 7.40431ZM13.4399 9.39975H13.6866C14.0032 9.39975 14.2599 9.14948 14.2599 8.84077C14.2599 8.53205 14.0032 8.28179 13.6866 8.28179H13.4399C13.2885 8.28005 13.1426 8.33749 13.0349 8.44129C12.9272 8.54509 12.8665 8.68661 12.8666 8.83427C12.8665 9.14405 13.1222 9.39618 13.4399 9.39975ZM5.05343 6.28636H9.28677C9.60341 6.28636 9.8601 6.03609 9.8601 5.72738C9.8601 5.41866 9.60341 5.1684 9.28677 5.1684H5.05343C4.73938 5.16838 4.48375 5.4147 4.4801 5.72088C4.48008 6.03066 4.73572 6.2828 5.05343 6.28636Z" fill="#A6ABC8"/>
+                            </svg>  
+                            Payment  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9705 5.46829C12.9705 7.67106 11.2043 9.43733 8.99998 9.43733C6.7964 9.43733 5.02949 7.67106 5.02949 5.46829C5.02949 3.26552 6.7964 1.5 8.99998 1.5C11.2043 1.5 12.9705 3.26552 12.9705 5.46829ZM9 16.5C5.74678 16.5 3 15.9712 3 13.9312C3 11.8904 5.76404 11.3804 9 11.3804C12.254 11.3804 15 11.9092 15 13.9492C15 15.99 12.236 16.5 9 16.5Z" fill="#A6ABC8"/>
+                            </svg>
+                            Accounts  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75238 1.4994H12.2549C14.7974 1.4994 16.4999 3.2844 16.4999 5.9394V12.0676C16.4999 14.7151 14.7974 16.4994 12.2549 16.4994H5.75238C3.20988 16.4994 1.49988 14.7151 1.49988 12.0676V5.9394C1.49988 3.2844 3.20988 1.4994 5.75238 1.4994ZM8.99244 6.79516C8.63994 6.79516 8.34744 6.50191 8.34744 6.14266C8.34744 5.77516 8.63994 5.48266 9.00744 5.48266C9.36744 5.48266 9.65994 5.77516 9.65994 6.14266C9.65994 6.50191 9.36744 6.79516 8.99244 6.79516ZM9.65231 11.8351C9.65231 12.1951 9.35981 12.4876 8.99231 12.4876C8.63231 12.4876 8.33981 12.1951 8.33981 11.8351V8.52014C8.33981 8.15939 8.63231 7.86014 8.99231 7.86014C9.35981 7.86014 9.65231 8.15939 9.65231 8.52014V11.8351Z" fill="#A6ABC8"/>
+                            </svg>          
+                            Help  
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="logo">
+            <h1 class="logo-circle">G</h1>
+            <h1 class="logo-text">Goodfood</h1>
+        </div>
+        <div class="search">
+            <input type="text" id="search" name="search">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.91314 10.8263C8.6266 10.8263 10.8263 8.6266 10.8263 5.91314C10.8263 3.19969 8.6266 1 5.91314 1C3.19969 1 1 3.19969 1 5.91314C1 8.6266 3.19969 10.8263 5.91314 10.8263Z" stroke="#627B87" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.7193 9.71889L12.8074 12.807" stroke="#627B87" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>
+                
+        </div>
+        <div class="account">
+            <div class="login-image">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M0 16.12H16V0.12H0V16.12Z" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_0_117" transform="scale(0.015625)"/>
+                    </pattern>
+                    <image id="image0_0_117" width="64" height="64" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                </svg>
+            </div>
+            <div class="login-name">
+                <a href="">Delicious Burger</a>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.5">
+                    <path d="M9.99997 13.0942L15.0083 8.08584L13.8308 6.90668L9.99997 10.74L6.16997 6.90668L4.99164 8.08501L9.99997 13.0942Z" fill="#1F384C"/>
+                    </g>
+                </svg>    
+            </div>
+            <div class="notification new">
+                <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.4 16C5.51684 15.9957 4.80073 15.2831 4.792 14.4H7.992C7.99369 14.6139 7.9529 14.826 7.872 15.024C7.66212 15.5056 7.23345 15.8569 6.72 15.968H6.716H6.704H6.6896H6.6824C6.58945 15.9874 6.49492 15.9981 6.4 16ZM12.8 13.6H0V12L1.6 11.2V6.8C1.55785 5.67129 1.81275 4.5513 2.3392 3.552C2.86323 2.62521 3.75896 1.9671 4.8 1.744V0H8V1.744C10.0632 2.2352 11.2 4.0304 11.2 6.8V11.2L12.8 12V13.6Z" fill="#B0C3CC"/>
+                </svg>
+                    
+            </div>
+                
+        </div>
+    </header>
+    <div class="main">
+        <section class="container">
+            <h1 class="intro-heading">
+                Dashboard
+            </h1>
+            <div class="cards">
+                <div class="item double header-1">
+                    <div class="card-header">
+                        <div class="left">
+                            <h1>Revenue</h1>
+                            <h2>IDR 7.852.000</h2>
+                            <h3>
+                                <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.6086 11L4.6086 1.96395" stroke="#149D52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.00001 4.55754L4.55761 0.999943L8.1152 4.55754" stroke="#149D52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="green">2.1%</span><span class="text"> vs last week.</span>
+                            </h3>
+                        </div>
+                        <div class="right">
+                            <button class="btn">
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content type-1">
+                        <h1>Sales from 1-12 Dec, 2020</h1>
+                            <div id="graph-1"></div>
+                            <div class="bullets">
+                                <ul>
+                                    <li class="blue">Last 6 Days</li>
+                                    <li class="gray">Last Week</li>
+                                </ul>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="item solo header-2">
+                    <div class="card-header">
+                        <div class="left">
+                            <h1>Order Time</h1>
+                            <h2>From 1-6 Dec, 2020</h2>
+                        </div>
+                        <div class="right">
+                            <button class="btn">
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content type-2">
+                        <div id="donut"></div>
+                        <div class="bullets-2">
+                            <ul>
+                                <li class="blue"><div></div>Afternoon <div>40%</div></li>
+                                <li class="light-blue"><div></div>Evening <div>40%</div></li>
+                                <li class="purple"><div></div>Morning <div>40%</div></li>
+                            </ul>
+                        </div>     
+                    </div>
+                </div>
+                <div class="item solo header-2">
+                    <div class="card-header">
+                        <div class="left">
+                            <h1>Your Rating</h1>
+                            <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+                        </div>   
+                    </div>
+                    <div class="card-content type-2 bubbles">
+                        <div class="circle1">
+                            <svg height="110" width="110">
+                                <circle cx="55" cy="55" r="50"/>
+                                <text x="50%" y="40%" text-anchor="middle" dominant-baseline="middle" >85%</text>
+                                <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" class="small" >Hygine</text>
+                                <circle cx="55" cy="55" r="54"/>
+                            </svg>
+                        </div>
+                        <div class="circle2">
+                            <svg height="168" width="168">
+                                <circle cx="84" cy="84" r="79"/>
+                                <text x="50%" y="45%" text-anchor="middle" dominant-baseline="middle" >85%</text>
+                                <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" class="small" >Food Taste</text>
+                                <circle cx="84" cy="84" r="83"/>
+                            </svg>
+                        </div>
+                        <div class="circle3">
+                            <svg height="130" width="130">
+                                <circle cx="65" cy="65" r="60"/>
+                                <text x="50%" y="45%" text-anchor="middle" dominant-baseline="middle" >92%</text>
+                                <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" class="small" >Packaging</text>
+                                <circle cx="65" cy="65" r="64"/>
+                            </svg>
+                        </div>
+                          
+                    </div>
+                </div>
+                <div class="item solo header-2">
+                    <div class="card-header">
+                        <div class="left">
+                            <h1>Most Ordered Food</h1>
+                            <h2>Adipiscing elit, sed do eiusmod tempor</h2>
+                        </div>
+                    </div>
+                    <div class="card-content type-2">
+                        <div class="food-list">
+                            <div class="food-item">
+                                <div class="food">
+                                    <img src="img/img1.png" alt="">
+                                    <h1>Fresh Salad Bowl</h1>
+                                </div>
+                                <div class="price">
+                                    <h1>IDR 45.000</h1>
+                                </div>
+                            </div>
+                            <div class="food-item">
+                                <div class="food">
+                                    <img src="img/img2.png" alt="">
+                                    <h1>Chicken Noodles</h1>
+                                </div>
+                                <div class="price">
+                                    <h1>IDR 75.000</h1>
+                                </div>
+                            </div>
+                            <div class="food-item">
+                                <div class="food">
+                                    <img src="img/img3.png" alt="">
+                                    <h1>Smoothie Fruits</h1>
+                                </div>
+                                <div class="price">
+                                    <h1>IDR 45.000</h1>
+                                </div>
+                            </div>
+                            <div class="food-item">
+                                <div class="food">
+                                    <img src="img/img4.png" alt="">
+                                    <h1>Hot Chicken Wings</h1>
+                                </div>
+                                <div class="price">
+                                    <h1>IDR 45.000</h1>
+                                </div>
+                            </div>
+                        </div>   
+                </div>
+                </div>
+                <div class="item solo header-1">
+                    <div class="card-header">
+                        <div class="left">
+                            <h1>Order</h1>
+                            <h2>2.568</h2>
+                            <h3>
+                                <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.5066 1L4.5066 10.0361" stroke="#F2383A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.1152 7.44246L4.5576 11.0001L1 7.44246" stroke="#F2383A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                                <span class="red">2.1%</span><span class="text"> vs last week.</span>
+                            </h3>
+                        </div>
+                        <div class="right">
+                            <button class="btn">
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content type-1">
+                        <h1>Sales from 1-12 Dec, 2020</h1>
+                        <div id="graph-2"></div>
+                            <div class="bullets">
+                                <ul>
+                                    <li class="blue">Last 6 Days</li>
+                                    <li class="gray">Last Week</li>
+                                </ul>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+<script>    var trace1 = {
+    x: [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12],
+    y: [120, 80, 100, 75, 125, 135, 110, 80, 100, 75, 120, 170],
+    type: 'bar',
+    marker: {
+      color: 'rgb(90, 106, 207)'
+    }
+  };
+  
+  var trace2 = {
+    x: [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12],
+    y: [60, 110, 50, 100, 80, 60, 60, 110, 50, 100, 80, 60],
+    type: 'bar',
+    marker: {
+      color: 'rgb(230, 232, 236)'
+    }
+  };
+  
+  var data = [trace1, trace2];
+  
+  var layout = {
+    barmode: 'group',
+    bargroupgap: 0.30,
+    bargap:0.50,
+    height: 180,
+    margin:{
+        l: 0,
+        r: 20,
+        t: 0,
+        b: 40,
+    },
+
+    showlegend: false,
+    yaxis: {
+        zerolinecolor: '#E2E7E7',
+    },
+    xaxis:{
+        tickmode: 'linear',
+        tickcolor: 'white',
+        ticklen: 10,
+        ticktext: ["01", "02", '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        tickfont: {
+            color: '#737B8B',
+            family: 'Poppins'
+        }
+    }
+  };
+
+  var config = {responsive: true, displayModeBar: false};
+  
+  Plotly.newPlot('graph-1', data, layout ,config);
+  
+  var trace3 = {
+  x: [1, 2, 3, 4, 5, 6],
+  y: [50, 40, 100, 90, 50, 150],
+  type: 'scatter',
+  mode: 'lines',
+  line: {
+    color: 'rgb(90, 106, 207)',
+    width: 4
+  }
+};
+
+var trace4 = {
+  x: [1, 2, 3, 4, 5, 6],
+  y: [70, 125, 50, 120, 95, 110],
+  type: 'scatter',
+  mode: 'lines',
+  line: {
+    color: 'rgb(230, 232, 236)',
+    width: 4
+  }
+};
+
+var data2 = [trace3, trace4];
+
+var layout2 = {
+    height: 145,
+    margin:{
+        l: 0,
+        r: 20,
+        t: 0,
+        b: 40,
+    },
+    showlegend: false,
+    yaxis: {
+        showticklabels: false,
+        tick0: 0,
+        dtick: 50,
+        fixedrange: true,
+        nticks: 3,
+        rangemode: 'tozero',
+ 
+    },
+    xaxis:{
+        showgrid: false,
+        showline: true,
+        linecolor: '#E2E7E7',
+        tickcolor: 'white',
+        tickmode: 'linear',
+        ticklen: 10,
+        tickfont: {
+            color: '#737B8B',
+            family: 'Poppins'
+        }
+    }
+  };
+
+var config = {responsive: true, displayModeBar: false};
+Plotly.newPlot('graph-2', data2, layout2, config);
+
+var data3 = [{
+  values: [40,32,28],
+  labels: ['Afternoon', 'Evening', 'Morning'],
+  domain: {column: 0},
+  hole: .7,
+  textinfo: 'none',
+  /*  hovertemplate: `<br>%{labels}<br>` +
+                        "<br>%{time}<br>" +
+                        "<br>%{value} <extra></extra>",
+  time: ['1pm - 4pm', '4pm - 8pm', '9am - 1pm'],*/
+  type: 'pie',
+  marker: {
+    colors: [
+      'rgb(90, 106, 207)',
+      'rgb(133, 147, 237)',
+      'rgb(199, 206, 255)'
+    ]
+  },
+  hovermode: 'closest'
+  }];
+
+var layout3 = {
+    height: 250,
+    margin:{
+        l: 0,
+        r: 0,
+        t: 40,
+        b: 40,
+    },
+  showlegend: false,
+ 
+  grid: {rows: 1, columns: 1}
+};
+
+var config = {responsive: true, displayModeBar: false};
+
+Plotly.newPlot('donut', data3, layout3, config);
+</script>
+</html>
