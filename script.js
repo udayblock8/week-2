@@ -66,7 +66,7 @@ var trace1 = {
 
 var trace4 = {
   x: [1, 2, 3, 4, 5, 6],
-  y: [70, 125, 50, 120, 95, 110],
+  y: [80, 125, 50, 120, 95, 110],
   type: 'scatter',
   mode: 'lines',
   line: {
