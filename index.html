@@ -101,7 +101,7 @@
             <h1 class="logo-text">Goodfood</h1>
         </div>
         <div class="search">
-            <input type="text" id="search" name="search">
+            <input type="text" id="search" name="search" placeholder="Search">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.5">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.91314 10.8263C8.6266 10.8263 10.8263 8.6266 10.8263 5.91314C10.8263 3.19969 8.6266 1 5.91314 1C3.19969 1 1 3.19969 1 5.91314C1 8.6266 3.19969 10.8263 5.91314 10.8263Z" stroke="#627B87" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -176,7 +176,7 @@
                             
                     </div>
                 </div>
-                <div class="item solo header-2">
+                <div class="item donut header-2">
                     <div class="card-header">
                         <div class="left">
                             <h1>Order Time</h1>
@@ -193,13 +193,13 @@
                         <div class="bullets-2">
                             <ul>
                                 <li class="blue"><div></div>Afternoon <div>40%</div></li>
-                                <li class="light-blue"><div></div>Evening <div>40%</div></li>
-                                <li class="purple"><div></div>Morning <div>40%</div></li>
+                                <li class="light-blue"><div></div>Evening <div>32%</div></li>
+                                <li class="purple"><div></div>Morning <div>28%</div></li>
                             </ul>
                         </div>     
                     </div>
                 </div>
-                <div class="item solo header-2">
+                <div class="item bubble header-2">
                     <div class="card-header">
                         <div class="left">
                             <h1>Your Rating</h1>
@@ -234,7 +234,7 @@
                           
                     </div>
                 </div>
-                <div class="item solo header-2">
+                <div class="item food-container header-2">
                     <div class="card-header">
                         <div class="left">
                             <h1>Most Ordered Food</h1>
@@ -282,7 +282,7 @@
                         </div>   
                 </div>
                 </div>
-                <div class="item solo header-1">
+                <div class="item line-graph header-1">
                     <div class="card-header">
                         <div class="left">
                             <h1>Order</h1>
@@ -318,153 +318,5 @@
     </div>
 
 </body>
-<script>    var trace1 = {
-    x: [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12],
-    y: [120, 80, 100, 75, 125, 135, 110, 80, 100, 75, 120, 170],
-    type: 'bar',
-    marker: {
-      color: 'rgb(90, 106, 207)'
-    }
-  };
-  
-  var trace2 = {
-    x: [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12],
-    y: [60, 110, 50, 100, 80, 60, 60, 110, 50, 100, 80, 60],
-    type: 'bar',
-    marker: {
-      color: 'rgb(230, 232, 236)'
-    }
-  };
-  
-  var data = [trace1, trace2];
-  
-  var layout = {
-    barmode: 'group',
-    bargroupgap: 0.30,
-    bargap:0.50,
-    height: 180,
-    margin:{
-        l: 0,
-        r: 20,
-        t: 0,
-        b: 40,
-    },
-
-    showlegend: false,
-    yaxis: {
-        zerolinecolor: '#E2E7E7',
-    },
-    xaxis:{
-        tickmode: 'linear',
-        tickcolor: 'white',
-        ticklen: 10,
-        ticktext: ["01", "02", '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
-        tickfont: {
-            color: '#737B8B',
-            family: 'Poppins'
-        }
-    }
-  };
-
-  var config = {responsive: true, displayModeBar: false};
-  
-  Plotly.newPlot('graph-1', data, layout ,config);
-  
-  var trace3 = {
-  x: [1, 2, 3, 4, 5, 6],
-  y: [50, 40, 100, 90, 50, 150],
-  type: 'scatter',
-  mode: 'lines',
-  line: {
-    color: 'rgb(90, 106, 207)',
-    width: 4
-  }
-};
-
-var trace4 = {
-  x: [1, 2, 3, 4, 5, 6],
-  y: [70, 125, 50, 120, 95, 110],
-  type: 'scatter',
-  mode: 'lines',
-  line: {
-    color: 'rgb(230, 232, 236)',
-    width: 4
-  }
-};
-
-var data2 = [trace3, trace4];
-
-var layout2 = {
-    height: 145,
-    margin:{
-        l: 0,
-        r: 20,
-        t: 0,
-        b: 40,
-    },
-    showlegend: false,
-    yaxis: {
-        showticklabels: false,
-        tick0: 0,
-        dtick: 50,
-        fixedrange: true,
-        nticks: 3,
-        rangemode: 'tozero',
- 
-    },
-    xaxis:{
-        showgrid: false,
-        showline: true,
-        linecolor: '#E2E7E7',
-        tickcolor: 'white',
-        tickmode: 'linear',
-        ticklen: 10,
-        tickfont: {
-            color: '#737B8B',
-            family: 'Poppins'
-        }
-    }
-  };
-
-var config = {responsive: true, displayModeBar: false};
-Plotly.newPlot('graph-2', data2, layout2, config);
-
-var data3 = [{
-  values: [40,32,28],
-  labels: ['Afternoon', 'Evening', 'Morning'],
-  domain: {column: 0},
-  hole: .7,
-  textinfo: 'none',
-  /*  hovertemplate: `<br>%{labels}<br>` +
-                        "<br>%{time}<br>" +
-                        "<br>%{value} <extra></extra>",
-  time: ['1pm - 4pm', '4pm - 8pm', '9am - 1pm'],*/
-  type: 'pie',
-  marker: {
-    colors: [
-      'rgb(90, 106, 207)',
-      'rgb(133, 147, 237)',
-      'rgb(199, 206, 255)'
-    ]
-  },
-  hovermode: 'closest'
-  }];
-
-var layout3 = {
-    height: 250,
-    margin:{
-        l: 0,
-        r: 0,
-        t: 40,
-        b: 40,
-    },
-  showlegend: false,
- 
-  grid: {rows: 1, columns: 1}
-};
-
-var config = {responsive: true, displayModeBar: false};
-
-Plotly.newPlot('donut', data3, layout3, config);
-</script>
+<script src="script.js"></script>
 </html>

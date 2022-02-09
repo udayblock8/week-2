@@ -3,18 +3,28 @@ $grey-primary: #F1F2F7;
 $font: 'Poppins', sans-serif;
 $sidebar-width: 240px;
 
+
+
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
+
 .container{
-    padding:20px 20px;
+    padding:20px 40px;
 }
 
 body{
     font-family: $font;
+}
+
+::placeholder {
+    font-family: $font;
+    color: rgba(31, 56, 76, 0.3);
 }
 
 
@@ -130,7 +140,7 @@ body{
         position: relative;
 
         input{
-            padding: 10px;
+            padding: 10px 40px 10px 15px;
             width:100%;
             border-radius: 5px;
             background-color: #F6F6FB;
@@ -177,6 +187,7 @@ body{
         .notification{
            margin:0px 20px;
            position: relative;
+           line-height: 13px;
         }
         .new::before{
             position: absolute;
@@ -185,8 +196,9 @@ body{
             height: 6px;
             background-color: #EC5252;
             border-radius: 50%;
-            right: 0;
-            top: 0;
+            right: -2px;
+            top: -2px;
+            border: 1px solid white;
         }
         
     }
@@ -199,22 +211,40 @@ body{
 }
 
 .intro-heading{
-    padding:20px;
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 0.5px;
     color: #1F384C;
+    padding-top: 20px;
+}
+
+.donut{
+    padding: 0px 0px 0px 40px;
+}
+
+.bubble{
+    padding-top: 40px;
+    padding-right:40px;
+}
+
+.food-container{
+    padding: 40px 40px 0px 40px;
+}
+
+.line-graph{
+    padding: 40px 0px 0px 40px;
 }
 
 .cards{
     display:grid;
+    padding-top: 40px;
     grid-template: 'bigGrid bigGrid .'
                     '. . .';
     grid-template-columns: 1fr 1fr 1fr;
 
     .double{
         grid-area: bigGrid;
-        padding-bottom: 40px;
+        padding-right: 40px;
     }
 
     .item:nth-child(2), .item:last-child{
@@ -228,7 +258,6 @@ body{
     }
 
     .item{
-        padding: 20px 20px;
         letter-spacing: 0.5px;
         border-right: 0.5px solid #C8CBD9;
         .card-header{
@@ -240,15 +269,17 @@ body{
                 }
             }
             .right{
-                padding: 0px 20px;
+                //padding: 0px 20px;
                 .btn{
+                    box-shadow: 0px 2px 1px rgba(64, 72, 82, 0.05);
                     background-color: #FBFCFE;
                     border:0.5px solid #DDE4F0;
                     color:#5A6ACF;
                     padding: 6px 16px;
                     border-radius: 5px;
                     font:{
-                        weight: bold;
+                        family:$font;
+                        weight: 500;
                         size: 12px;
                     }
                 }
@@ -323,6 +354,7 @@ body{
 
         .bullets
         {
+            margin-top:20px;
             ul{
                 list-style: none;
                 position: relative;
@@ -362,6 +394,7 @@ body{
         }
 
         .bullets-2{
+            margin-top:20px;
             ul{
                 list-style: none;
                 display: flex;
@@ -422,11 +455,13 @@ body{
             .food{
                 display: flex;
                 align-items: center;
+                padding:10px 0;
                 img{
-                    padding:10px 10px;
                     border-radius: 50%;
+                    box-shadow: 0px 5px 20px grey;
                 }
                 h1{
+                    padding-left: 20px;
                     font:{
                         weight: 400;
                         size: 12px;
@@ -483,7 +518,7 @@ body{
 
     .circle2{
         z-index: -1;
-        right: 40px;
+        right: 25px;
         top: 60px;
         position: absolute;
         circle:first-child{
