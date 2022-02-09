@@ -117,16 +117,15 @@ var config = {responsive: true, displayModeBar: false};
 Plotly.newPlot('graph-2', data2, layout2, config);
 
 var data3 = [{
-  values: [40,32,28],
-  labels: ['Afternoon', 'Evening', 'Morning'],
-  domain: {column: 0},
+  values: [1890,1512,1328],
+  labels: ["Afternoon", "Evening", "Morning"],
   hole: .7,
   textinfo: 'none',
-  /*  hovertemplate: `<br>%{labels}<br>` +
-                        "<br>%{time}<br>" +
-                        "<br>%{value} <extra></extra>",
-  time: ['1pm - 4pm', '4pm - 8pm', '9am - 1pm'],*/
+  text: ["<b>Afternoon</b> <br>1pm - 4pm", "<b>Evening</b> <br>4pm - 8pm", "<b>Morning</b> <br>9am - 1pm"],
+  hovertemplate: ' %{text}<br> %{value} <extra></extra>',
+  
   type: 'pie',
+  direction: 'clockwise',
   marker: {
     colors: [
       'rgb(90, 106, 207)',
@@ -145,6 +144,7 @@ var layout3 = {
         t: 40,
         b: 40,
     },
+    
   showlegend: false,
  
   grid: {rows: 1, columns: 1}
