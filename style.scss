@@ -2,13 +2,19 @@ $blue-primary: #5A67BA;
 $grey-primary: #F1F2F7;
 $font: 'Poppins', sans-serif;
 $sidebar-width: 240px;
-
+@mixin font($size, $weight) {
+    font:{
+        weight: $weight;
+        size: $size;
+    }
+}
 
 
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    @include font(12px, 400);
 }
 
 
@@ -47,6 +53,7 @@ body{
     align-items: center;
     background-color: #F1F2F7;
     
+    
     .logo-circle {
         width: 24px;
         height:24px;
@@ -55,16 +62,10 @@ body{
         background-color: $blue-primary;
         color:white;
         text-align: center;
-        font:{
-            weight: 700;
-            size:11px;
-        }
+        @include font(11px, 700);
     }
     .logo-text{
-        font: {
-            weight:700;
-            size:11px;
-            }
+        @include font(11px, 700);
         line-height: 24px;
         margin-left:10px;
         color: $blue-primary;
@@ -78,11 +79,10 @@ body{
 
 .menu {
     .menu-heading{
-        color:#082431;
+        color:rgba(#082431,0.5);
         padding:20px 20px 10px 20px;
         text-transform: uppercase;
-        font-weight: 400;
-        font-size:11px;
+        @include font(11px, 400);
     } 
     .menu-items
     {
@@ -104,7 +104,7 @@ body{
                 display: flex;
                 align-items: center;
                 text-decoration: none;
-                color:#273240;
+                color:rgba(#273240, 0.7);
                 letter-spacing: 0.5px;
                 font-weight: normal;
             }
@@ -113,8 +113,7 @@ body{
             padding:15px 20px;
             margin-bottom:10px;
             border-radius: 5px;
-            font-weight: 500;
-            font-size: 12px;
+            @include font(12px, 500);
             
         }
     }  
@@ -134,7 +133,7 @@ body{
 
     .search{
         padding: 12px 40px;
-        flex: 60%;
+        flex: 65%;
         display: flex;
         align-items: center;
         position: relative;
@@ -170,10 +169,6 @@ body{
 
         .login-name{
             display: flex;
-            font:{
-                size:12px;
-                weight:400;
-            }
             color: #1F384C;
             a{
                 text-decoration: none;
@@ -187,7 +182,7 @@ body{
         .notification{
            margin:0px 20px;
            position: relative;
-           line-height: 13px;
+           line-height: 5px;
         }
         .new::before{
             position: absolute;
@@ -211,8 +206,7 @@ body{
 }
 
 .intro-heading{
-    font-weight: 500;
-    font-size: 18px;
+    @include font(18px, 500);
     letter-spacing: 0.5px;
     color: #1F384C;
     padding-top: 20px;
@@ -264,9 +258,12 @@ body{
             display: flex;
             justify-content: space-between;
             .left{
-                h1, h2{
+                .one, .two{
                     margin-bottom: 8px;
                 }
+            }
+            .left > span{
+                display: block;
             }
             .right{
                 //padding: 0px 20px;
@@ -277,11 +274,9 @@ body{
                     color:#5A6ACF;
                     padding: 6px 16px;
                     border-radius: 5px;
-                    font:{
-                        family:$font;
-                        weight: 500;
-                        size: 12px;
-                    }
+                    font-family: $font;
+                    letter-spacing: 0.5px;
+                    @include font(12px, 500);
                 }
             }
         }
@@ -292,23 +287,13 @@ body{
     .header-1{
         .left{
                 
-            h1{
-                font:{
-                    size: 14px;
-                    weight: 400;
-                }
+            .one{
+
             }
-            h2{
-                font:{
-                    size:20px;
-                    weight:500;
-                }
+            .two{
+                @include font(20px, 500);
             }
-            h3{
-                font:{
-                    size:12px;
-                    weight:400;
-                }
+            .three{
                 .text{
                     color:#000000;
                     opacity: 0.5;
@@ -333,17 +318,11 @@ body{
     .header-2{
         .left{
                 
-            h1{
-                font:{
-                    size: 14px;
-                    weight: 400;
-                }
+            .one{
+                @include font(14px, 400);
             }
-            h2{
-                font:{
-                    size:13px;
-                    weight:400;
-                }
+            .two{
+                @include font(13px, 400);
                 color:#000000;
                 opacity: 0.5;
             }
@@ -361,11 +340,8 @@ body{
                 
                 li{
                     display: inline;
-                    font:{
-                        size: 12px;
-                        weight: normal;
-                    }
-                    margin-left: 30px;
+                    margin-left: 20px;
+                    margin-right: 30px;
                 }
 
                 li::before{
@@ -379,15 +355,15 @@ body{
 
                 .blue::before{
                     background-color: #5A6ACF;
-                    top: 9px;
-                    left: 9px;
+                    top: 5px;
+                    left: 0px;
                 }
 
                 .gray::before{
                     background-color:#D8D9DB;
-                    top: 9px;
-                    left: 78px;
-                    margin-left: 40px;
+                    top: 5px;
+                    left: 74px;
+                    margin-left: 50px;
                 }
             }
 
@@ -401,10 +377,7 @@ body{
                 justify-content: space-between;
             }
             li{
-                font:{
-                    weight: 500;
-                    size: 12px;
-                }
+                @include font(12px, 500);
                 color: rgba(18, 18, 18, 0.7);
                 div:first-child{
                     width: 9px;
@@ -433,11 +406,8 @@ body{
 
     }
     .type-1{
-        h1{
-            font:{
-                size:13px;
-                weight:400;
-            }
+        p{
+            @include font(13px, 400);
             color:#000000;
             opacity: 0.5;
             margin: 20px 0px;
@@ -458,25 +428,15 @@ body{
                 padding:10px 0;
                 img{
                     border-radius: 50%;
-                    box-shadow: 0px 5px 20px grey;
+                    box-shadow: 0px 5px 10px grey;
                 }
-                h1{
+                p{
                     padding-left: 20px;
-                    font:{
-                        weight: 400;
-                        size: 12px;
-                    }
                     display: inline-block;
                 }
             }
             .price{
-                h1{
                     color: rgba(39, 50, 64, 0.7);
-                    font:{
-                        weight: 400;
-                        size: 12px;
-                    }
-                }
             }
         }
 
@@ -504,10 +464,7 @@ body{
             opacity: 0.8;
         }
         text{
-            font:{
-                weight: 400;
-                size: 20px;
-            }
+            @include font(20px, 400);
             fill:white;
         }
         
@@ -535,10 +492,7 @@ body{
             opacity: 0.8;
         }
         text{
-            font:{
-                weight: 400;
-                size: 33px;
-            }
+            @include font(33px, 400);
             fill:white;
         }
         
@@ -566,10 +520,7 @@ body{
             opacity: 0.8;
         }
         text{
-            font:{
-                weight: 400;
-                size: 24px;
-            }
+            @include font(24px, 400);
             fill:white;
         }
         
@@ -590,3 +541,5 @@ body{
 .ygrid{
     stroke-dasharray: 4px;
 }
+
+

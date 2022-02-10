@@ -3,6 +3,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .container {
@@ -81,7 +83,7 @@ body {
 }
 
 .menu .menu-heading {
-  color: #082431;
+  color: rgba(8, 36, 49, 0.5);
   padding: 20px 20px 10px 20px;
   text-transform: uppercase;
   font-weight: 400;
@@ -122,7 +124,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
-  color: #273240;
+  color: rgba(39, 50, 64, 0.7);
   letter-spacing: 0.5px;
   font-weight: normal;
 }
@@ -147,9 +149,9 @@ body {
 
 .header .search {
   padding: 12px 40px;
-  -webkit-box-flex: 60%;
-      -ms-flex: 60%;
-          flex: 60%;
+  -webkit-box-flex: 65%;
+      -ms-flex: 65%;
+          flex: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,8 +203,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 12px;
-  font-weight: 400;
   color: #1F384C;
 }
 
@@ -218,7 +218,7 @@ body {
 .header .account .notification {
   margin: 0px 20px;
   position: relative;
-  line-height: 13px;
+  line-height: 5px;
 }
 
 .header .account .new::before {
@@ -300,8 +300,12 @@ body {
           justify-content: space-between;
 }
 
-.cards .item .card-header .left h1, .cards .item .card-header .left h2 {
+.cards .item .card-header .left .one, .cards .item .card-header .left .two {
   margin-bottom: 8px;
+}
+
+.cards .item .card-header .left > span {
+  display: block;
 }
 
 .cards .item .card-header .right .btn {
@@ -313,51 +317,42 @@ body {
   padding: 6px 16px;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
   font-weight: 500;
   font-size: 12px;
 }
 
-.cards .header-1 .left h1 {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.cards .header-1 .left h2 {
+.cards .header-1 .left .two {
+  font-weight: 500;
   font-size: 20px;
-  font-weight: 500;
 }
 
-.cards .header-1 .left h3 {
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.cards .header-1 .left h3 .text {
+.cards .header-1 .left .three .text {
   color: #000000;
   opacity: 0.5;
 }
 
-.cards .header-1 .left h3 svg, .cards .header-1 .left h3 .green, .cards .header-1 .left h3 .red {
+.cards .header-1 .left .three svg, .cards .header-1 .left .three .green, .cards .header-1 .left .three .red {
   opacity: 1;
   font-weight: 600;
 }
 
-.cards .header-1 .left h3 .green {
+.cards .header-1 .left .three .green {
   color: #149D52;
 }
 
-.cards .header-1 .left h3 .red {
+.cards .header-1 .left .three .red {
   color: #F2383A;
 }
 
-.cards .header-2 .left h1 {
-  font-size: 14px;
+.cards .header-2 .left .one {
   font-weight: 400;
+  font-size: 14px;
 }
 
-.cards .header-2 .left h2 {
-  font-size: 13px;
+.cards .header-2 .left .two {
   font-weight: 400;
+  font-size: 13px;
   color: #000000;
   opacity: 0.5;
 }
@@ -373,9 +368,8 @@ body {
 
 .cards .card-content .bullets ul li {
   display: inline;
-  font-size: 12px;
-  font-weight: normal;
-  margin-left: 30px;
+  margin-left: 20px;
+  margin-right: 30px;
 }
 
 .cards .card-content .bullets ul li::before {
@@ -388,15 +382,15 @@ body {
 
 .cards .card-content .bullets ul .blue::before {
   background-color: #5A6ACF;
-  top: 9px;
-  left: 9px;
+  top: 5px;
+  left: 0px;
 }
 
 .cards .card-content .bullets ul .gray::before {
   background-color: #D8D9DB;
-  top: 9px;
-  left: 78px;
-  margin-left: 40px;
+  top: 5px;
+  left: 74px;
+  margin-left: 50px;
 }
 
 .cards .card-content .bullets-2 {
@@ -444,9 +438,9 @@ body {
   background: #c7ceff;
 }
 
-.cards .type-1 h1 {
-  font-size: 13px;
+.cards .type-1 p {
   font-weight: 400;
+  font-size: 13px;
   color: #000000;
   opacity: 0.5;
   margin: 20px 0px;
@@ -482,21 +476,17 @@ body {
 
 .cards .food-list .food-item .food img {
   border-radius: 50%;
-  -webkit-box-shadow: 0px 5px 20px grey;
-          box-shadow: 0px 5px 20px grey;
+  -webkit-box-shadow: 0px 5px 10px grey;
+          box-shadow: 0px 5px 10px grey;
 }
 
-.cards .food-list .food-item .food h1 {
+.cards .food-list .food-item .food p {
   padding-left: 20px;
-  font-weight: 400;
-  font-size: 12px;
   display: inline-block;
 }
 
-.cards .food-list .food-item .price h1 {
+.cards .food-list .food-item .price {
   color: rgba(39, 50, 64, 0.7);
-  font-weight: 400;
-  font-size: 12px;
 }
 
 .cards .food-list .food-item:last-child {
