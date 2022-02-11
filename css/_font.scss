@@ -1,0 +1,10 @@
+$blue-primary: #5A67BA;
+$grey-primary: #F1F2F7;
+$font: 'Poppins', sans-serif;
+$sidebar-width: 240px;
+@mixin font($size, $weight) {
+    font:{
+        weight: $weight;
+        size: $size;
+    }
+}

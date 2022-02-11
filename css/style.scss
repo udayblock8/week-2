@@ -1,0 +1,61 @@
+@import '_font.scss';
+@import '_nav.scss';
+@import '_cards.scss';
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    @include font(12px, 400);
+}
+
+.container{
+    padding:20px 40px;
+}
+
+body{
+    font-family: $font;
+}
+
+::placeholder {
+    font-family: $font;
+    color: rgba(31, 56, 76, 0.3);
+}
+
+
+.main{
+    margin-left: $sidebar-width;
+    margin-top: 64px;
+}
+
+.intro-heading{
+    @include font(18px, 500);
+    letter-spacing: 0.5px;
+    color: #1F384C;
+    padding-top: 20px;
+}
+
+.donut{
+    padding: 0px 0px 0px 40px;
+}
+
+.bubble{
+    padding-top: 40px;
+    padding-right:40px;
+}
+
+.food-container{
+    padding: 40px 40px 0px 40px;
+}
+
+.line-graph{
+    padding: 40px 0px 0px 40px;
+}
+
+
+.ygrid{
+    stroke-dasharray: 4px;
+}
+
+

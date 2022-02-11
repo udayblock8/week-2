@@ -1,0 +1,308 @@
+.cards{
+    display:grid;
+    padding-top: 40px;
+    grid-template: 'bigGrid bigGrid .'
+                    '. . .';
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .double{
+        grid-area: bigGrid;
+        padding-right: 40px;
+    }
+
+    .item:nth-child(2), .item:last-child{
+        border-right:none;
+    }
+
+    .item:nth-child(1), .item:nth-child(2)
+    {
+        border-bottom: 0.5px solid #C8CBD9;
+        padding-bottom: 40px;
+    }
+
+    .item{
+        letter-spacing: 0.5px;
+        border-right: 0.5px solid #C8CBD9;
+        .card-header{
+            display: flex;
+            justify-content: space-between;
+            .left{
+                .one, .two{
+                    margin-bottom: 8px;
+                }
+            }
+            .left > span{
+                display: block;
+            }
+            .right{
+                //padding: 0px 20px;
+                .btn{
+                    box-shadow: 0px 2px 1px rgba(64, 72, 82, 0.05);
+                    background-color: #FBFCFE;
+                    border:0.5px solid #DDE4F0;
+                    color:#5A6ACF;
+                    padding: 6px 16px;
+                    border-radius: 5px;
+                    font-family: $font;
+                    letter-spacing: 0.5px;
+                    @include font(12px, 500);
+                }
+            }
+        }
+    }
+
+
+
+    .header-1{
+        .left{
+                
+            .one{
+
+            }
+            .two{
+                @include font(20px, 500);
+            }
+            .three{
+                .text{
+                    color:#000000;
+                    opacity: 0.5;
+                }
+
+                svg, .green, .red{
+                    opacity: 1;
+                    font-weight: 600;
+                }
+
+                .green{
+                    color:#149D52;
+                }
+
+                .red{
+                    color: #F2383A;
+                }
+            }
+        }
+    }
+
+    .header-2{
+        .left{
+                
+            .one{
+                @include font(14px, 400);
+            }
+            .two{
+                @include font(13px, 400);
+                color:#000000;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .card-content{
+
+        .bullets
+        {
+            margin-top:20px;
+            ul{
+                list-style: none;
+                position: relative;
+                
+                li{
+                    display: inline;
+                    margin-left: 20px;
+                    margin-right: 30px;
+                }
+
+                li::before{
+                    content:"";
+                    position: absolute;
+                    width:9px;
+                    height:9px;
+                    border-radius: 50%;
+
+                }
+
+                .blue::before{
+                    background-color: #5A6ACF;
+                    top: 5px;
+                    left: 0px;
+                }
+
+                .gray::before{
+                    background-color:#D8D9DB;
+                    top: 5px;
+                    left: 74px;
+                    margin-left: 50px;
+                }
+            }
+
+        }
+
+        .bullets-2{
+            margin-top:20px;
+            ul{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+            }
+            li{
+                @include font(12px, 500);
+                color: rgba(18, 18, 18, 0.7);
+                div:first-child{
+                    width: 9px;
+                    height:9px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+                div:last-child{
+                    margin-left: 18px;
+                    font-weight: 400;
+                }
+            }
+            .blue > div:first-child{
+                    background: rgba(90, 106, 207, 1);
+            }
+
+            .light-blue > div:first-child{
+                background: rgba(133, 147, 237, 1);
+            }
+
+            .purple > div:first-child{
+                background: rgba(199, 206, 255, 1);
+            }
+        }
+
+    }
+    .type-1{
+        p{
+            @include font(13px, 400);
+            color:#000000;
+            opacity: 0.5;
+            margin: 20px 0px;
+        }
+    }
+    
+    .food-list{
+        margin-top: 30px;
+        .food-item{
+            display: flex;
+            align-items: center;
+            padding: 10px 0px;
+            border-bottom: 0.5px solid #DBE5EB;
+            justify-content: space-between;
+            .food{
+                display: flex;
+                align-items: center;
+                padding:10px 0;
+                img{
+                    border-radius: 50%;
+                    box-shadow: 0px 5px 10px grey;
+                }
+                p{
+                    padding-left: 20px;
+                    display: inline-block;
+                }
+            }
+            .price{
+                    color: rgba(39, 50, 64, 0.7);
+            }
+        }
+
+        .food-item:last-child
+        {
+            border-bottom: none;
+        }
+    }
+
+    .circle1{
+        position: absolute;
+        z-index:0;
+        left:90px;
+        circle:first-child{
+            fill: rgb(100, 99, 214);
+            opacity: 0.8;
+        }
+
+        circle:last-child{
+            fill:none;
+            stroke: rgb(100, 99, 214);
+            stroke-width: 2;
+            stroke-dasharray: 128;
+            stroke-dashoffset: 1;
+            opacity: 0.8;
+        }
+        text{
+            @include font(20px, 400);
+            fill:white;
+        }
+        
+        .small{
+            font-size: 12px;
+        }
+    }
+
+    .circle2{
+        z-index: -1;
+        right: 25px;
+        top: 60px;
+        position: absolute;
+        circle:first-child{
+            fill: #F99C30;
+            opacity: 0.9;
+        }
+
+        circle:last-child{
+            fill:none;
+            stroke: #F99C30;
+            stroke-width: 2;
+            stroke-dasharray: 195;
+            stroke-dashoffset: 1;
+            opacity: 0.8;
+        }
+        text{
+            @include font(33px, 400);
+            fill:white;
+        }
+        
+        .small{
+            font-size: 12px;
+        }
+    }
+
+    .circle3{
+        left: 40px;
+        top: 150px;
+        position: absolute;
+        circle:first-child{
+            fill: #2FBFDE;
+            opacity: 0.9;
+        }
+
+        circle:last-child{
+            fill:none;
+            stroke: #2FBFDE;
+            ;
+            stroke-width: 2;
+            stroke-dasharray: 150;
+            stroke-dashoffset: 1;
+            opacity: 0.8;
+        }
+        text{
+            @include font(24px, 400);
+            fill:white;
+        }
+        
+        .small{
+            font-size: 12px;
+        }
+    }
+
+
+    .bubbles{
+        position: relative;
+        height: 100%;
+        padding: 40px 40px;
+    }
+
+}
